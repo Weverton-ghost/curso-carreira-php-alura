@@ -1,20 +1,30 @@
 <?php
 
+//Função para exibir mensagem.
+function exibeMensagemLancamento($anoLancamentoMsg) {
+    if ($anoLancamentoMsg >= 2024){
+        echo "Esse filme é um lançamento!\n";
+    } elseif ($anoLancamentoMsg >= 2020 && $anoLancamentoMsg <= 2023){
+        echo "Esse filme ainda é novo!\n";
+    } else {
+        echo "Esse filme não é lançamento!\n";
+    }
+}
+
 echo "Bem vindo(a) ao sreen match!\n";
 
 $nomeFilme = "Top gun Maverick\n";
+$anoLancamento = 2022;
 echo "Nome do filme: " . $nomeFilme; // Junção por concatenação.
 $nomeFilme = "Thor ragnarok";
 $nomeFilme = "Rena do noel";
 
-$anoLancamento = 2022;
-if ($anoLancamento >= 2024){
-    echo "Esse filme é um lançamento!\n";
-} elseif ($anoLancamento >= 2020 && $anoLancamento <= 2023){
-    echo "Esse filme ainda é novo!\n";
-} else {
-    echo "Esse filme não é lançamento!\n";
-}
+//Sempre que chamar uma função tem que ter os ();
+exibeMensagemLancamento($anoLancamento);
+//E ela pode ser chamada em vários lugares e ultilizando valores diferentes, mas se baseando,
+//nas mesmas ações do código dentro daquele bloco da função.
+exibeMensagemLancamento(2010);
+//já exibiu esse filme não é lançamento...
 
 // As ' apenas exibe o texto que está dentro dela, não interpleta nada.
 // AS " vai buscar interpletar o código.
