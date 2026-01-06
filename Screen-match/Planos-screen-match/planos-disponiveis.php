@@ -4,7 +4,16 @@ $planoSenior = true;
 $planoPleno = true;
 $planoJunior = false;
 
-if ($incluidoNoPlano = $planoSenior || $anoLancamento < 2020){
+$filme = "Thor - ragnarok";
+$anoLancamentoPlano = 2022;
+
+function incluidoNoPlano($planoSenior, $anoLancamentoPlano){
+    return $planoSenior || $anoLancamentoPlano < 2020;
+    //Com o return eu retorno o resultado da análise dos planos junto com o anoLancamento, fazendo a verificação do parametrô 2020 também. 
+}
+$incluidoNoPlano = incluidoNoPlano ($planoSenior, $anoLancamentoPlano);
+
+if ($incluidoNoPlano){
     echo "Para o seu plano esse filme está disponível!\n";
 } else {
     echo "O filme não está disponível no seu plano!\n";
