@@ -210,7 +210,7 @@ do {
 } while ($opcao !== 4);*/
 
 //COM POO
-class ContaBancaria {
+/*class ContaBancaria {
     //Atributos: variável que pertece a classe e guarda o estado do objeto.
     private string $titular;
     private float $saldo;
@@ -295,5 +295,31 @@ do {
             echo "Digite uma opção válida!\n";
             break;
     }
-} while ($opcao != 4);
+} while ($opcao != 4);*/
+
+//Escreva uma função em PHP que receba dois números inteiros e uma string representando a operação matemática e retorne o resultado da operação.
+function exibirNumeros(int $n1, int $n2, string $operacao): float {
+    return match($operacao) {
+        "Soma" => $n1 + $n2,
+        "Subtração" => $n1 - $n2,
+        "Divisão" => $n1 / $n2,
+        "Multiplicação" => $n1 * $n2,
+    };
+}
+$calculadora = exibirNumeros(25, 25, "Soma");
+echo "Valor da soma: " . $calculadora;
+
+//Crie uma função em PHP que calcule o IMC baseado na altura e peso passados por parâmetro.
+function calculaImc(float $alturaEmMetros, float $pesoEmQuilos): float {
+    return $pesoEmQuilos / $alturaEmMetros ** 2; 
+}
+$calculoImc = calculaImc($alturaEmMetros = 1.60, $pesoEmQuilos = 56);
+echo "\nSeu Imc: " . $calculoImc;
+
+//Crie uma função em PHP que converta Fahrenheit para graus celsius.
+function conversaoDeGraus(float $fahrenheit): float{
+    return ($fahrenheit - 32) * 5 / 9;
+}
+$grausCelcius = conversaoDeGraus($fahrenheit = 98.6);
+echo "\nGraus celcius: $grausCelcius";
 
