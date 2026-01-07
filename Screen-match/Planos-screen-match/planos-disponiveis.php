@@ -7,7 +7,8 @@ $planoJunior = false;
 $filme = "Thor - ragnarok";
 $anoLancamentoPlano = 2022;
 
-function incluidoNoPlano($planoSenior, $anoLancamentoPlano){
+//Add tipos das variaveis da função, e o tipo do retorno, nesse exemplo ele retornou um valor bool, pois é uma verficação se aquele plano está incluido tais planos, e o senior tem o valor de true.
+function incluidoNoPlano(bool $planoSenior, int $anoLancamentoPlano): bool{
     return $planoSenior || $anoLancamentoPlano < 2020;
     //Com o return eu retorno o resultado da análise dos planos junto com o anoLancamento, fazendo a verificação do parametrô 2020 também. 
 }

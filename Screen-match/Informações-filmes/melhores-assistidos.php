@@ -1,7 +1,8 @@
 <?php
 
 //Função para exibir mensagem.
-function exibeMensagemLancamento($anoLancamentoMsg) {
+//O tipo de retorno é o void, pois ele não retornou nada, ficou no vácuo, a function não teve um tipo de retorno para a variável pela qual foi puxada. 
+function exibeMensagemLancamento(int $anoLancamentoMsg): void {
     if ($anoLancamentoMsg >= 2024){
         echo "Esse filme é um lançamento!\n";
     } elseif ($anoLancamentoMsg >= 2020 && $anoLancamentoMsg <= 2023){
