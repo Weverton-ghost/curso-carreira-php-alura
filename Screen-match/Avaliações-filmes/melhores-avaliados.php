@@ -60,6 +60,67 @@ echo "Números de argumentos inseridos com o arquivo: " . $argc . "\n";
 echo "Números de argumentos inseridos apenas pelo user: " . ($argc - 1) . "\n";
 
 //Array no PHP é a estrutura de dados mais importante podendo ser efetuadas muitas coisas.
-$notasParaOFilme = [10, 9, 8, 7.5, 5, 6.8]; //Array com 6 elementos
+$notasParaOFilme = [10, 9, 8, 7.5, 5.1, 6.8]; //Array com 6 elementos
 var_dump($notasParaOFilme);
 
+//Manipulação de arrays em PHP.
+//Sempre que pensar em manipular/trabalhar com arrays, provavelmente tem uma função que faz algo do tipo, ex: vou pegar esse array de notas e filtrar para ter apenas notas acima de 7, terá uma função que faz esse filtro, ou se eu quero ordenar minhas notas, terá uma função que faz isso também.
+
+//Vamos ordenar essas notas, percebe que no var_dump acima de notas para o filme, é imprido aleatoriamente sem ordenança.
+sort($notasParaOFilme); //Ordenou os parâmetros. 
+//sort ordena em ordem crescente - rsort ordena em ordem descrecente. 
+var_dump($notasParaOFilme);
+//Observe que nessa execução, a minha lista de arrays, quando eu chamo o var_dump estão em ordem.
+$menorNota = min($notasParaOFilme); //filtrei e exibi a minha menor nota.
+echo "Sua menor nota é: " . $menorNota . "\n";
+
+//Tipos mais ultilizados de manipulação de arrays no PHP:
+
+/*Verficar coisas no array:
+    count($array) conta quantos itens tem
+    in_array($valor, $array) vê se um valor existe no array
+    array_key_exists("chaves", $array) vê se uma chave existe
+
+ Adicionar ou remover itens:
+    array_push($array, 1, 2) adiciona no final
+    $array[] = 3 jeito rápido de adicionar ao final
+    array_pop($array) remove o último
+    array_shift($array) remove o primeiro
+    unset($array[2]) remove um índice especifico
+    
+Percorrer o array:
+    foreach ($array as $item){} o mais usado para ler item por item pois ele transforma os itens do array em uma variavel item, ou seja um por um, lendo item por item.
+    array_map(fn($x) => $x*2, $array) aplica uma função em cada item
+    
+Filtrar / encontrar:
+    array_filter($array, fn($x) => $x > 10) filtra com condição
+    array_search($valor, $array) retorna a posição do valor
+
+Ordenar:
+    sort($array) ordena valores (crescente)
+    rsort($array) ordena decrecente
+    asort($array) ordena mantendo as chaves
+    ksort($array) ordena pelas chaves
+
+Transformar / dividir / juntar:
+    explode(",", $string) transforma string em array
+    implode("-", $array) junta array em string
+    array_slice($array, 0, 3) pega uma parte do array
+    array_merge($a, $b) junta 2 array
+    
+Depuração:
+    var_dump($array) mostra tudo do arrya com os tipos
+    print_r($array) mostra mais bonito e simples    */
+
+$filmesArray = ["Thor", "Matrix", "Avatar"]; //Arrays
+
+echo "Quantidade de Arrays: " . count ($filmesArray) . "\n"; // 3
+
+array_push($filmesArray, "Inception"); //Add um filme no final
+
+foreach ($filmesArray as $filme) {
+    echo $filme . "\n";
+} //Percorre todos item a item e transformando os em $filme 
+
+sort($filmesArray); //Ordenados em ordem crescente
+print_r($filmesArray); //Depurados em maneira simples. 

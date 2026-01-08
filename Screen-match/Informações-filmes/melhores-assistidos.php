@@ -11,6 +11,7 @@ function exibeMensagemLancamento(int $anoLancamentoMsg): void {
         echo "Esse filme não é lançamento!\n";
     }
 }
+//Nessa função desse modelo, como ele tem retorno void, o $anoLancamentoMsg é atribuido o valor lá da variavel $anoLancamento, e lá que é atribuido o parametro, ou seja 0 valor ele é copiado e colado lá dentro da função. 
 
 echo "Bem vindo(a) ao sreen match!\n";
 

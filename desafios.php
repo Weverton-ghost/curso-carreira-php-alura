@@ -297,7 +297,7 @@ do {
     }
 } while ($opcao != 4);*/
 
-//Escreva uma função em PHP que receba dois números inteiros e uma string representando a operação matemática e retorne o resultado da operação.
+/*//Escreva uma função em PHP que receba dois números inteiros e uma string representando a operação matemática e retorne o resultado da operação.
 function exibirNumeros(int $n1, int $n2, string $operacao): float {
     return match($operacao) {
         "Soma" => $n1 + $n2,
@@ -321,5 +321,4 @@ function conversaoDeGraus(float $fahrenheit): float{
     return ($fahrenheit - 32) * 5 / 9;
 }
 $grausCelcius = conversaoDeGraus($fahrenheit = 98.6);
-echo "\nGraus celcius: $grausCelcius";
-
+echo "\nGraus celcius: $grausCelcius";*/
