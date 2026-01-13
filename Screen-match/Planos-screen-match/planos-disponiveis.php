@@ -34,4 +34,4 @@ switch ($mensalidadePlano) {
     default:
         echo "Você não possui faturas em aberto.\n";
         break;  
-}
+} 

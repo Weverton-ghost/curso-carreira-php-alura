@@ -322,3 +322,109 @@ function conversaoDeGraus(float $fahrenheit): float{
 }
 $grausCelcius = conversaoDeGraus($fahrenheit = 98.6);
 echo "\nGraus celcius: $grausCelcius";*/
+
+//Desafio de tranformar dias em idade, exibindo ano, mês e dia!
+
+/*class Idade {
+    private int $anos;
+    private int $meses;
+    private int $dias;
+
+    public function __construct(int $anos, int $meses, int $dias) {
+        $this->anos = $anos;
+        $this->meses = $meses;
+        $this->dias = $dias;
+    }
+    public function anos(): int {
+        return $this->anos;
+    }
+    public function meses(): int {
+        return $this->meses;
+    }
+    public function dias(): int {
+        return $this->dias;
+    }
+    public function __toString(): string {
+        return "{$this->anos} ano(s)\n{$this->meses} mes(es)\n{$this->dias}\n";
+    }
+}
+
+class ConversorIdade {
+    public function converter(int $diasTotais): Idade {
+        
+    }
+}*/
+
+/*class numerosParentes {
+    private int $num;
+
+    public function __construct(int $num){
+        $this->num = $num;
+    }
+    public function num(): int {
+        return $this->num;
+    }
+    public function resultado(): string {
+        return "{$this->num}";
+    }
+    function numeroPrimo(): bool {
+        if ($this->num < 2){
+            return false;
+        } 
+
+        $limiteCalculo = sqrt($this->num);
+
+        for ($i = 2; $i <= $limiteCalculo; $i++){
+            if ($this->num % $i === 0) return false;
+        }
+        return true;
+    }
+}
+
+//Explicando o loop for: um número primo não pode ser menor que 1, por isso o inicializado começa em 2, um número primo pode ser apenas multiplicado por ele mesmo por isso a condição fala $i * $i <= this->num 
+
+$numero = new numerosParentes(2);
+if ($numero->numeroPrimo()){
+    echo "O Número: " . $numero->resultado() . " é PRIMO!\n";
+} else {
+    echo "O Número: " . $numero->resultado() . " Não é PRIMO!\n";
+}*/
+
+/*function verificaoNumeroPrimo(int $numeroUsuario): bool {
+    if ($numeroUsuario < 2){
+        return false;
+    }
+    for ($i = 2; $i < $numeroUsuario; $i++) {
+        if ($numeroUsuario % $i === 0)
+        return false;
+    }
+    return true;
+}
+
+echo "Digite um número: ";
+$numeroUsuario = (int) fgets(STDIN);
+
+if (verificaoNumeroPrimo($numeroUsuario)){
+    echo "\nO seu número é PRIMO!\n";
+} else {
+    echo "O seu número não é PRIMO!\n";
+}*/
+
+echo "Digite seu número: ";
+$numeroUser = fgets(STDIN);
+$contador = 0;
+
+for ($i = $numeroUser; $i > 0; $i--) {
+        echo "Valor i: $i\n";
+        $resultado = $numeroUser % $i;
+        echo "Resultado = $resultado\n";
+    if ($resultado == 0){
+        $contador = $contador + 1;
+        echo "Contador: $contador\n";
+    }
+}
+if ($contador == 2){
+    echo "Esse número é PRIMO!";
+} elseif ($contador > 2) {
+    echo "Esse número não é PRIMO!";
+}

@@ -11,7 +11,10 @@ function exibeMensagemLancamento(int $anoLancamentoMsg): void {
         echo "Esse filme não é lançamento!\n";
     }
 }
-//Nessa função desse modelo, como ele tem retorno void, o $anoLancamentoMsg é atribuido o valor lá da variavel $anoLancamento, e lá que é atribuido o parametro, ou seja 0 valor ele é copiado e colado lá dentro da função. 
+//Nessa função desse modelo, como ele tem retorno void, o $anoLancamentoMsg é atribuido o valor lá da variavel $anoLancamento, e lá que é atribuido o parametro, ou seja 0 valor ele é copiado e colado lá dentro da função.
+
+//Existe as funções normal que trabalham por copias, ou seja se é alterado o valor de uma variavel dentro não altera fora, se é alterado fora não se aletera dentro, que são as usadas. 
+//Existe as referenciadas que devem ser declaradas ex: &$anoLacamentoMsg, e elas se alteram em originais, ou seja, se altera a variavel de fora também altera dentro, se altera a variavel dentro altera a de fora. (raramente utilizadas)
 
 echo "Bem vindo(a) ao sreen match!\n";
 
@@ -50,7 +53,7 @@ var_dump($argv);
 
 $filme = [
     //Arrays associativos pois nome se associa com o titulo do filme e etc.
-    "Nome do filme" => "Thor - Ragnarok",
+    "Nome do filme" => "Thor: Ragnarok",
     "Ano de lançamento" => 2021,
     "Nota do filme" => 7.8,
     "Gênero do filme" => "Super-herói",
@@ -59,3 +62,6 @@ $filme = [
 //Percebe que imprimiu apenas a nota que é o 2, porque começa em 0;
 //Ele imprimiria a nota do filme, mas foi passado uma melhor forma de exibição.
 echo $filme["Nome do filme"];
+
+var_dump("Nome do filme");
+var_dump(strpos($filme["Nome do filme"], ":"));

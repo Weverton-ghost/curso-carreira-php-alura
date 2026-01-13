@@ -73,6 +73,7 @@ var_dump($notasParaOFilme);
 //Observe que nessa execução, a minha lista de arrays, quando eu chamo o var_dump estão em ordem.
 $menorNota = min($notasParaOFilme); //filtrei e exibi a minha menor nota.
 echo "Sua menor nota é: " . $menorNota . "\n";
+var_dump($menorNota);
 
 //Tipos mais ultilizados de manipulação de arrays no PHP:
 
