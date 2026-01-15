@@ -410,7 +410,7 @@ if (verificaoNumeroPrimo($numeroUsuario)){
     echo "O seu número não é PRIMO!\n";
 }*/
 
-echo "Digite seu número: ";
+/*echo "Digite seu número: ";
 $numeroUser = fgets(STDIN);
 $contador = 0;
 
@@ -427,4 +427,34 @@ if ($contador == 2){
     echo "Esse número é PRIMO!";
 } elseif ($contador > 2) {
     echo "Esse número não é PRIMO!";
+}*/
+
+
+/*echo "Digite um número: ";
+$numero = (int) fgets(STDIN);
+
+class Numero {
+    public int $numero;
+
+    public function __construct(int $numero) {
+        $this->numero = $numero;
+    }
+
+    public function verificaParImpar(int $numero): bool {
+        
+        if ($this->numero % 2 == 0) {
+                return true;
+            }
+        return false;           
+    }
 }
+
+
+$obj = new Numero($numero);
+$resultado = $obj->verificaParImpar($numero);
+
+if ($resultado){
+    echo "O número é PAR!";
+} else {
+    echo "O número é ÍMPAR!";
+}*/
