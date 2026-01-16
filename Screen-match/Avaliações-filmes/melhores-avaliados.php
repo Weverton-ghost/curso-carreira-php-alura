@@ -125,3 +125,13 @@ foreach ($filmesArray as $filme) {
 
 sort($filmesArray); //Ordenados em ordem crescente
 print_r($filmesArray); //Depurados em maneira simples. 
+
+function exibeMensagemLancamento(int $anoLancamentoMsg): void {
+    if ($anoLancamentoMsg >= 2024){
+        echo "Esse filme é um lançamento!\n";
+    } elseif ($anoLancamentoMsg >= 2020 && $anoLancamentoMsg <= 2023){
+        echo "Esse filme ainda é novo!\n";
+    } else {
+        echo "Esse filme não é lançamento!\n";
+    }
+}

@@ -2,15 +2,11 @@
 
 //Função para exibir mensagem.
 //O tipo de retorno é o void, pois ele não retornou nada, ficou no vácuo, a function não teve um tipo de retorno para a variável pela qual foi puxada. 
-function exibeMensagemLancamento(int $anoLancamentoMsg): void {
-    if ($anoLancamentoMsg >= 2024){
-        echo "Esse filme é um lançamento!\n";
-    } elseif ($anoLancamentoMsg >= 2020 && $anoLancamentoMsg <= 2023){
-        echo "Esse filme ainda é novo!\n";
-    } else {
-        echo "Esse filme não é lançamento!\n";
-    }
-}
+
+require __DIR__ . "/../Avaliações-filmes/melhores-avaliados.php";
+//Com o DIR eu transformo de relativo que pode mudar, para um caminho absoluto, evitando bugs futuros.
+//é a mesma função ele copia a função se ela tivesse lá em mehlores-avaliados.php, porque para o teste eu colei ela lá 
+
 //Nessa função desse modelo, como ele tem retorno void, o $anoLancamentoMsg é atribuido o valor lá da variavel $anoLancamento, e lá que é atribuido o parametro, ou seja 0 valor ele é copiado e colado lá dentro da função.
 
 //Existe as funções normal que trabalham por copias, ou seja se é alterado o valor de uma variavel dentro não altera fora, se é alterado fora não se aletera dentro, que são as usadas. 
@@ -76,3 +72,5 @@ var_dump($exibirPorIndice);
 
 $exibirPorIndiceComPadrao = substr($filme["Nome do filme"], 0, $posicaoDoR);
 var_dump($exibirPorIndiceComPadrao);
+
+//cd navego para cima das pastas no terminal e cd .. eu volto.
