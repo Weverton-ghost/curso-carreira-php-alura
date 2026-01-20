@@ -458,3 +458,36 @@ if ($resultado){
 } else {
     echo "O número é ÍMPAR!";
 }*/
+
+/*$notasFilme = [7.0, 8.0, 3.3, 4.5, 8.0];
+
+foreach($notasFilme as $nota){
+    echo "Nota: " . $nota . "\n";
+}
+$menorNota = min($notasFilme);
+echo "Menor nota do filme: " . $menorNota;*/
+
+/*$arrayNotas = [9.7, 7.0, 9.8, 8.0, 5.4];
+
+rsort($arrayNotas); //Organiza em ordem decresente 
+foreach($arrayNotas as $nota){ //passei um valor para cada na variavel nota
+    $top3 = array_slice($arrayNotas, 0, 3); //recortei com o array_slice falando que começa pelo 0 e pega 03 números
+}
+var_dump($top3);*/
+
+//Cheguei no resultado dos maiores e os menores porque eu ordenei a ordem dos números, como eu precisava dos números maiores, ordenei por decrecente ou seja, do maior ao menor, usei o array slice para recortar, passei quais eu queria e impuz um limite pelo quantidade que eu queria, se eu quisesse os 3 menores números só ordenava em ordem crescente, dos menores para os maiores...
+
+/*$array = ["banana", "abacaxi", "laranja", "uva"];
+
+function ordenarString(array $array): array{
+    sort($array); //ordem crescente
+    return $array; //retorna o valor de array
+}
+
+$arrayOrdenado = ordenarString($array); //usa a função
+print_r($arrayOrdenado); //imprime a função com uma nova variável em execução.*/
+
+//tranformando string em array:
+//$string = "Weverton inácio,2005,Engenheiro de software";
+//var_dump(explode(",", $string));    
+
