@@ -63,10 +63,27 @@ E para isso vamos utilizar o JSON para empacotar esses dados desse arrays da var
 //echo json_encode($filme);
 //Essa função pega um valor ou variável e transforma/empacota no formato JSON
 
-//Agora imagine que queremos transformar ela em algo que o meu php entenda, e não fique igual está {"nome":"Thor: Ragnarok","ano":2021,"nota":7.8,"genero":"super-her\u00f3i"} 
+//Agora imagine que queremos transformar ela em algo que o meu php entenda, e não fique igual está {"nome":"Thor: Ragnarok","ano":2021,"nota":7.8,"genero":"super-her\u00f3i"}
 
-var_dump(json_decode('{"nome":"Thor: Ragnarok","ano":2021,"nota":7.8,"genero":"super-her\u00f3i"}', true));
-//Passo true por parametro, porque ele me pergunta, você quer que ele continue seguindo o mesmo modelo = array associativo, se eu não passo esse parametro ele se torna um objeto. 
+
+//Agora vamos transformar ela em uma string json, e salvar ela em um arquivo
+//json_encode meio que transforma os dados php em uma string universal(JSON)
+
+//Transformei meu array associativo em string JSON
+$filmeComoStringJson = json_encode($filme);
+
+//essa função coloca conteúdo em um arquivo, e nos parametros temos o DIR que é o diretorio absoluto atual do arquivo, conactenando o caminho no filme.json, e o conteudo que eu vou escrever é o segundo parametro, que é o valor da variavel.
+file_put_contents(__DIR__ . "/filme.json", $filmeComoStringJson);
+//com isso conseguimos escrever em um arquivo, então em resumo nós transformamaos ele em string json, e exportamos ele para dentro de um arquivo. 
+
+
+//E se eu quiser ler esse arquivo, importar o que tem dentro dele para outro arquivo? - vou criar um novo arquivo para importar ele e exibir os dados dele em um array associativo pois quero ler esse arquivo. 
+//EFETUADO NO VERSÃO CURSO.
+
+
+//var_dump(json_decode('{"nome":"Thor: Ragnarok","ano":2021,"nota":7.8,"genero":"super-her\u00f3i"}', true));
+//Passo true por parametro, porque ele me pergunta, você quer que ele continue seguindo o mesmo modelo = array associativo, se eu não passo esse parametro ele se torna um objeto.
+
 
 //echo $filme[2];
 //Percebe que imprimiu apenas a nota que é o 2, porque começa em 0;
