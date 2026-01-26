@@ -491,3 +491,12 @@ print_r($arrayOrdenado); //imprime a função com uma nova variável em execuç�
 //$string = "Weverton inácio,2005,Engenheiro de software";
 //var_dump(explode(",", $string));    
 
+//Transformando um array associativo em JSON, e importanto/escrevendo ele dentro de um arquivo. 
+
+/*$array = [
+    "nome" => "Weverton",
+    "idade" => "20",
+];
+
+$transformarEmJson = json_encode($array);
+$caminhoDoArquivo = file_put_contents(__DIR__ . "/importar.json", $transformarEmJson); */
