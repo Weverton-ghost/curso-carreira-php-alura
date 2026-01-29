@@ -1,5 +1,6 @@
 <?php
 
+require __DIR__ . "/src/Modelo/Filme.php";
 require __DIR__ . "/src/funcoes.php";
 
 echo "Bem-vindo(a) ao screen match!\n";
@@ -43,7 +44,7 @@ $filme = criaFilme (
 );
 
 
-echo $filme["ano"];
+echo $filme->anoLancamento;
 
 var_dump($notas);
 sort($notas);
@@ -51,11 +52,11 @@ var_dump($notas);
 $menorNota = min($notas);
 var_dump($menorNota);
 
-var_dump($filme['nome']);
-$posicaoDoisPontos = strpos($filme['nome'], ':');
+var_dump($filme->nome);
+$posicaoDoisPontos = strpos($filme->nome, ':');
 var_dump($posicaoDoisPontos);
 
-var_dump(substr($filme['nome'], 0, $posicaoDoisPontos));
+var_dump(substr($filme->nome, 0, $posicaoDoisPontos));
 
 //echo json_encode($filme);
 //var_dump(json_decode('{"nome":"Thor: Ragnarok","ano":2021,"nota":7.8,"genero":"super-her\u00f3i"}', true));
