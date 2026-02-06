@@ -19,4 +19,4 @@ var_dump($filme);
 
 echo $filme->media() . "\n";
 
-echo $filme->getAnoLancamento();
+echo $filme->anoLancamento;

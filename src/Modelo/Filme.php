@@ -4,9 +4,9 @@ class Filme {
     private array $notas;
 
     public function __construct(
-        private string $nome, 
-        private int $anoLancamento, 
-        private string $genero
+        public readonly string $nome, 
+        public readonly int $anoLancamento, 
+        public readonly string $genero
     ) {
         $this->notas = [];
     }
@@ -21,20 +21,5 @@ class Filme {
         $somaNotas = array_sum($this->notas);
         $quantidadeDeNotas = count($this->notas);
         return $somaNotas / $quantidadeDeNotas;
-    }
-
-    public function getAnoLancamento(): int 
-    {
-        return $this->anoLancamento;
-    }
-
-    public function getNome(): string 
-    {
-        return $this->nome; 
-    }
-
-    public function getGenero(): string 
-    {
-        return $this->genero;
     }
 }    
